@@ -1,6 +1,6 @@
-# copies file
+# 'Fixing wordpress issue that have  the .phpp extension to.php'
 
-file {'copy_file':
-  ensure => file,
-  source => '/var/www/html/wp-includes/class-wp-locale.php',
-  path   => '/var/www/html/wp-includes/class-wp-locale.phpp',}
+exec { 'fix-wordpress':
+  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+  path    => '/usr/local/bin/:/bin/'
+}

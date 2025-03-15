@@ -1,1 +1,1 @@
-## Web Stack Debugging 2
+Web debugging 2

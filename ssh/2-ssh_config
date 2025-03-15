@@ -1,3 +1,5 @@
-Host (IP of the alu_server)
-IdentityFile ~/.ssh/school
-PasswordAuthentication no
+#!/usr/bin/env bash 
+#removing the password requirement
+Host *
+	IdentifyFile ~/.ssh/school
+	PasswordAuthentication no

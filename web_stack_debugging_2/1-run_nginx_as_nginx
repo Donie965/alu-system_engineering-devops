@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
-# fixes hte web server two
-# changes the user to nginx
-# changes the listening to port 8080
-# updates the access grants
-# stops apache2 server
-# restarts nginx as user nginx
+# Fix this container so that Nginx is running as the nginx user.
+
 sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
 sed -i "s/80/8080/g" /etc/nginx/sites-available/default
 chmod 644 /etc/nginx/nginx.conf
